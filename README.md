@@ -1,6 +1,11 @@
 # GIT - Basics
 
 This repository contains all the GIT Basics.
+<br>
+
+Disclaimer: This setup works on ubuntu/debian based linux distributions.
+<br>
+In Windows, install Git 64-bit and after that open Powershell following step 2 and forward.
 
 ### 1. Install GIT
 ```shell

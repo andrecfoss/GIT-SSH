@@ -34,9 +34,9 @@ cat ~/.ssh/id_ed25519.pub
 
 ### 4. Adding a new Repository
 ```shell
-git clone git@github.com:andrecfoss/GIT-Sample.git
+git clone git@github.com:andrecfoss/GIT-SSH.git
 
-echo "# GIT-Sample" >> README.md
+echo "# GIT-SSH" >> README.md
 git init
 git add README.md
 git commit -m "first commit"

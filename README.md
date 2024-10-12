@@ -7,6 +7,8 @@ Disclaimer: This setup works on ubuntu/debian based linux distributions.
 <br>
 In Windows, install Git 64-bit and after that open Powershell following step 2 and forward.
 
+UPDATE: There is a `git.sh` written to automate this process.
+
 ### 1. Install GIT
 ```shell
 sudo apt install git -y

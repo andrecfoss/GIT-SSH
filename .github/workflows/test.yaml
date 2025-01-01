@@ -1,0 +1,19 @@
+name: Test GIT Setup script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup-git:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run script
+        run: |
+          chmod +x ${{ github.workspace }}/git.sh
+          ${{ github.workspace }}/git.sh

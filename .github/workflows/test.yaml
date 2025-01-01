@@ -13,6 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Find and run git.sh
+      - name: Find and run git.sh using -exec
         run: |
-          find . -name git.sh -exec {} \;
+          find . -name git.sh -exec chmod +x {} \; -exec {} \;
+

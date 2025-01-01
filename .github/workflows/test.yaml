@@ -15,10 +15,4 @@ jobs:
 
       - name: Find and run git.sh
         run: |
-          SCRIPT_PATH=$(find ${{ github.workspace }} -name "git.sh" -type f)
-          if [ -z "$SCRIPT_PATH" ]; then
-            echo "git.sh not found!"
-            exit 1
-          fi
-          chmod +x $SCRIPT_PATH
-          $SCRIPT_PATH
+          find . -name git.sh -exec {} \;

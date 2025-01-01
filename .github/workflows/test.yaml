@@ -13,7 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run script
+      - name: Find and run git.sh
         run: |
-          chmod +x ${{ github.workspace }}/git.sh
-          ${{ github.workspace }}/git.sh
+          SCRIPT_PATH=$(find ${{ github.workspace }} -name "git.sh" -type f)
+          if [ -z "$SCRIPT_PATH" ]; then
+            echo "git.sh not found!"
+            exit 1
+          fi
+          chmod +x $SCRIPT_PATH
+          $SCRIPT_PATH
